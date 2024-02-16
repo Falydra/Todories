@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:todories/components/background.dart';
 import 'package:todories/components/login_box.dart';
 import 'package:todories/components/hanging_clock.dart';
+import 'package:todories/components/login_form.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -18,23 +19,50 @@ class _LoginPageState extends State<LoginPage> {
       child: Stack(
         children: [
           Background(context),
-          Positioned(
-            top: 0,
-            bottom: 0,
-            left: 0,
-            right: MediaQuery.of(context).size.width * 0.65,
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [LoginBox(context)],
-            ),
-          ),
-          Positioned(
-            top: 0,
-            bottom: 0,
-            left: MediaQuery.of(context).size.width * 0.4,
-            right: 0,
-            child: HangingClock(),
-          ),
+          Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Center(
+                child: Container(
+                  width: 272,
+                  height: 440,
+                  decoration: BoxDecoration(
+                      color: Colors.transparent,
+                      borderRadius: BorderRadius.circular(16),
+                      border: Border.all(color: Color(0XFFe3dddf))),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Container(
+                        alignment: Alignment.bottomCenter,
+                        height: 48,
+                        width: 408,
+                        margin: EdgeInsets.only(left: 8, right: 8),
+                        decoration: BoxDecoration(
+                          border: Border.symmetric(vertical: BorderSide.none),
+                          borderRadius: BorderRadius.only(
+                              topLeft: Radius.circular(16),
+                              topRight: Radius.circular(16)),
+                        ),
+                        child: TextFormField(
+                          decoration: InputDecoration(
+                            border: InputBorder.none,
+                            enabledBorder: OutlineInputBorder(
+                              borderSide: BorderSide(
+                                  color: Color(0XFFe3dddf).withOpacity(0.5),
+                                  width: 1),
+                            ),
+                            hintText: 'hintText',
+                            hintStyle: TextStyle(color: Color(0XFFe3dddf)),
+                          ),
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+              )
+            ],
+          )
         ],
       ),
     ));

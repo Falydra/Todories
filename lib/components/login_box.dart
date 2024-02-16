@@ -45,11 +45,11 @@ Center LoginBox(BuildContext context) {
             ),
             Padding(
               padding: const EdgeInsets.only(top: 72),
-              child: LoginForm(),
+              child: LoginForm(hintText: 'Username'),
             ),
             Padding(
               padding: const EdgeInsets.only(bottom: 72.0),
-              child: LoginForm(),
+              child: LoginForm(hintText: 'Password'),
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,

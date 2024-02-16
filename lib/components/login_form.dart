@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-Row LoginForm() {
+Row LoginForm({String hintText = 'Username'}) {
   return Row(
     mainAxisAlignment: MainAxisAlignment.center,
     children: [
@@ -21,7 +21,7 @@ Row LoginForm() {
                 borderSide:
                     BorderSide(color: Color(0XFFe3dddf).withOpacity(0.5)),
                 borderRadius: BorderRadius.circular(16)),
-            hintText: 'Username',
+            hintText: hintText,
             hintStyle: TextStyle(color: Color(0XFF1C1C1A)),
             focusedBorder: OutlineInputBorder(
                 borderSide:
