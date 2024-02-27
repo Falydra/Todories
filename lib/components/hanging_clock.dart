@@ -6,12 +6,12 @@ Column HangingClock() {
     children: [
       Container(
         color: Color(0XFFe3dddf),
-        height: 320,
-        width: 8,
+        height: 240,
+        width: 6,
       ),
       Container(
-        height: 108,
-        width: 108,
+        height: 84,
+        width: 84,
         decoration:
             BoxDecoration(shape: BoxShape.circle, color: Color(0XFFe3dddf)),
         child: Center(child: CurrentTime()),

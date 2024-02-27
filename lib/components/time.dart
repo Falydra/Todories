@@ -32,7 +32,7 @@ class _CurrentTimeState extends State<CurrentTime> {
       style: TextStyle(
           fontFamily: 'INTER',
           color: Color(0XFF1C1C1A),
-          fontSize: 26,
+          fontSize: 18,
           fontWeight: FontWeight.w700),
     );
   }
